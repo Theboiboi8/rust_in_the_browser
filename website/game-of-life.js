@@ -1,8 +1,7 @@
-import { Universe, Cell } from "wasm_test";
-import { memory } from "wasm_test/wasm_test_bg";
+import { Universe, Cell } from "rust_in_the_browser";
+import { memory } from "rust_in_the_browser/rust_in_the_browser_bg";
 
-const urlQuery = window.location.search;
-const searchParams = new URLSearchParams(urlQuery);
+const searchParams = new URLSearchParams(window.location.search);
 
 const canvas = document.getElementById('game-of-life-canvas');
 const universe = searchParams.get('random') == null ? Universe.new() : Universe.random();
@@ -25,8 +24,8 @@ if (searchParams.get('random') != null) {
     button.setAttribute('class', "rand_link rand_active");
 }
 
-let reload_button = document.getElementById('reload_button');
-reload_button.addEventListener('click', (_ => {
+document.getElementById('reload_button')
+    .addEventListener('click', (_ => {
     window.location.reload();
 }))
 

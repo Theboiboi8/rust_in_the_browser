@@ -1,7 +1,12 @@
 [package]
-name = "wasm_test"
+name = "rust_in_the_browser"
 version = "0.1.0"
 edition = "2021"
+description = "Showcases of Rust in the browser"
+readme = "README.md"
+repository = "https://github.com/theboiboi8/rust_in_the_browser"
+homepage = ""
+license = "MIT OR APACHE-2.0"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
