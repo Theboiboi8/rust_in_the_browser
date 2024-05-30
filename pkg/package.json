@@ -1,0 +1,16 @@
+{
+  "name": "rust_in_the_browser",
+  "version": "0.1.0",
+  "files": [
+    "rust_in_the_browser_bg.wasm",
+    "rust_in_the_browser.js",
+    "rust_in_the_browser_bg.js",
+    "rust_in_the_browser.d.ts"
+  ],
+  "module": "rust_in_the_browser.js",
+  "types": "rust_in_the_browser.d.ts",
+  "sideEffects": [
+    "./rust_in_the_browser.js",
+    "./snippets/*"
+  ]
+}
