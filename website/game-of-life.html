@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Game of Life</title>
+	</head>
+	<body>
+		<main>
+			<a href="/" class="back_link">&larr;</a>
+			<a href="game-of-life.html?random" class="rand_link" id="rand_button">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5"/>
+					<path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192"/>
+				</svg>
+			</a>
+			<a class="reload_link" id="reload_button">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
+					<path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/>
+				</svg>
+			</a>
+			<canvas id="game-of-life-canvas"></canvas>
+		</main>
+
+		<noscript>This page contains WebAssembly and JavaScript content, please enable JavaScript in your browser.</noscript>
+		<script src="./bootstrap.js"></script>
+	</body>
+</html>
+
+<style>
+	@import "styles/game-of-life.css";
+
+	.back_link {
+        aspect-ratio: 1 / 1;
+		width: 32px;
+
+		font-size: 1rem;
+
+        background-color: var(--secondary-background-hex);
+        border-radius: 8px;
+        border: solid 2px rgb(var(--accent));
+
+        padding: 8px;
+        text-decoration: none;
+        overflow: hidden;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		position: absolute;
+		left: 8px;
+		top: 8px;
+	}
+
+    .rand_link {
+        aspect-ratio: 1 / 1;
+        width: 32px;
+
+        font-size: 1rem;
+
+        background-color: var(--secondary-background-hex);
+        border-radius: 8px;
+        border: solid 2px rgb(var(--accent-red));
+
+        padding: 8px;
+        text-decoration: none;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        left: calc(8px + 4px + 32px);
+        top: 8px;
+    }
+
+    .reload_link {
+        aspect-ratio: 1 / 1;
+        width: 32px;
+
+        font-size: 1rem;
+
+        background-color: var(--secondary-background-hex);
+        border-radius: 8px;
+        border: solid 2px rgb(var(--accent-orange));
+
+        padding: 8px;
+        text-decoration: none;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        left: calc(8px + 4px + 32px + 4px + 32px);
+        top: 8px;
+
+		cursor: pointer;
+    }
+
+	.rand_active {
+		border-color: var(--accent-hex);
+	}
+</style>

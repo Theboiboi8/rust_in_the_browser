@@ -1,0 +1,55 @@
+@import "root.css";
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+html,
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    background: var(--background-hex);
+    box-sizing: border-box;
+    overflow-x: hidden;
+    margin: 0;
+    color: var(--text-hex);
+
+    min-width: 100dvw;
+    min-height: 100dvh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: rgb(var(--accent));
+    color: black;
+}
+
+h1 {
+    font-family: "Anybody", "Inter", sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+a {
+    color: #e6e1cf;
+    text-decoration-color: rgb(var(--accent));
+    text-decoration-thickness: .1rem;
+    transition: all 100ms cubic-bezier(0.22, 1, 0.36, 1);
+    border-radius: 3px;
+    font-weight: 500;
+}
+a:hover,
+a:focus {
+    color: rgb(var(--accent));
+    text-decoration-thickness: .2rem;
+}
+
+:focus,
+:focus-visible {
+    outline: 5px solid rgb(var(--accent));
+    outline-offset: 10px;
+}

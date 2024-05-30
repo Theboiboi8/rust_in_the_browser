@@ -1,0 +1,25 @@
+:root {
+    --accent: 184, 204, 82;
+    --accent-hex: #b8cc52;
+
+    --secondary-accent: 54, 163, 217;
+    --secondary-accent-hex: #36a3d9;
+
+    --accent-red: 217, 108, 117;
+    --accent-red-hex: #d96c75;
+
+    --accent-orange: 255, 119, 51;
+    --accent-orange-hex: #ff7733;
+
+    --accent-yellow: 255, 180, 84;
+    --accent-yellow-hex: #ffb454;
+
+    --text: 230, 255, 207;
+    --text-hex: #e6e1cf;
+
+    --backgound: 15, 19, 24;
+    --background-hex: #0f1318;
+
+    --secondary-backgound: 25, 31, 38;
+    --secondary-background-hex: #191f26;
+}
