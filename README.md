@@ -6,7 +6,7 @@
 
 ## About
 
-A simple showcase of Rust being run in the browser vie WebAssembly.
+A simple showcase of Rust being run in the browser via WebAssembly.
 
 ## Developing
 
